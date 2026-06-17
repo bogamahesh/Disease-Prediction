@@ -31,7 +31,7 @@ The model-building notebook trains Logistic Regression, Random Forest, SVM, XGBo
 | --- | ---: | ---: | ---: | ---: |
 | Tuned LightGBM | 0.8701 | 0.8400 | 0.7778 | 0.8077 |
 
-These metrics were reproduced from `Data/diabetes_cleaned.csv` using the notebook split configuration: `test_size=0.2`, `random_state=42`, and stratified labels.
+These metrics were reproduced from `Disease Prediction/Data/diabetes_cleaned.csv` using the notebook split configuration: `test_size=0.2`, `random_state=42`, and stratified labels.
 
 ## Data Leakage Fix
 
@@ -54,7 +54,7 @@ Scaling is applied after the train/test split. The scaler is fitted only on `X_t
 ## Project Structure
 
 ```text
-.
+Disease Prediction/
 |-- Data/
 |   |-- diabetes.csv
 |   `-- diabetes_cleaned.csv
@@ -71,10 +71,11 @@ Scaling is applied after the train/test split. The scaler is fitted only on `X_t
 
 ## How to Run
 
-From the repository root:
+Clone the repository:
 
 ```bash
-cd "Disease Prediction"
+git clone https://github.com/bogamahesh/Disease-Prediction.git
+cd Disease-Prediction
 ```
 
 Create and activate a virtual environment:
@@ -99,17 +100,17 @@ pip install -r requirements.txt
 Run the notebooks:
 
 ```bash
-jupyter notebook notebooks/01_EDA.ipynb
-jupyter notebook notebooks/02_Model_Building.ipynb
+jupyter notebook "Disease Prediction/notebooks/01_EDA.ipynb"
+jupyter notebook "Disease Prediction/notebooks/02_Model_Building.ipynb"
 ```
 
 Run the Streamlit app:
 
 ```bash
-streamlit run app/app.py
+streamlit run "Disease Prediction/app/app.py"
 ```
 
-The app loads `best_model.pkl` and `scaler.pkl` for interactive diabetes risk predictions.
+The app loads `Disease Prediction/best_model.pkl` and `Disease Prediction/scaler.pkl` for interactive diabetes risk predictions.
 
 ## Disclaimer
 
