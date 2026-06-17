@@ -1,5 +1,8 @@
 # Disease Prediction
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 A machine learning project that predicts diabetes risk from patient diagnostic measurements using the PIMA Indians Diabetes dataset.
 
 ## ML Pipeline
@@ -32,6 +35,16 @@ The model-building notebook trains Logistic Regression, Random Forest, SVM, XGBo
 | Tuned LightGBM | 0.8701 | 0.8400 | 0.7778 | 0.8077 |
 
 These metrics were reproduced from `Disease Prediction/Data/diabetes_cleaned.csv` using the notebook split configuration: `test_size=0.2`, `random_state=42`, and stratified labels.
+
+## Resume Bullet
+
+- Built a diabetes disease prediction system using LightGBM with Accuracy: 87% and F1-score: 0.81, deployed through a Streamlit web app for interactive patient risk prediction.
+
+Key metrics:
+
+- Model: LightGBM
+- Accuracy: 87%
+- F1-score: 0.81
 
 ## Data Leakage Fix
 
